@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     //void 為返回類型
+    //void Start 此語法用在開始遊戲只執行一次
     void Start()
     {
         

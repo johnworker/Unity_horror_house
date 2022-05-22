@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     //在 Unity中3D空間由三個坐標表示數據類型稱為Vector3 。
     Vector3 m_Movement;
 
+    Animator m_Animator;
     // Start is called before the first frame update
     //void 為返回類型
     //void Start 此語法用在開始遊戲只執行一次
@@ -27,8 +28,13 @@ public class PlayerMovement : MonoBehaviour
         //創建一個新的浮動 水平 等於 輸入.取得軸("水平")
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
+
         m_Movement.Set(horizontal, 0f, vertical);
         m_Movement.Normalize();
+
+        bool hasHorizontalInput = !Mathf.Approximately(horizontal, 0f);
+        bool hasVerticalInput = !Mathf.Approximately(vertical, 0f);
+        bool isWalking = hasHorizontalInput || hasVerticalInput;
 
     }
 }

@@ -276,6 +276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac200d3cce003b4c99ecd38d9abeab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeDuration: 1
+  displayImageDuration: 1
+  player: {fileID: 8309037425384571944}
+  exitBackgroundImageCanvasGroup: {fileID: 1904447400}
 --- !u!1001 &483568150
 PrefabInstance:
   m_ObjectHideFlags: 0

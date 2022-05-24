@@ -3710,6 +3710,7 @@ GameObject:
   - component: {fileID: 1904447397}
   - component: {fileID: 1904447399}
   - component: {fileID: 1904447398}
+  - component: {fileID: 1904447400}
   m_Layer: 5
   m_Name: ExitImageBackground
   m_TagString: Untagged
@@ -3776,6 +3777,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904447396}
   m_CullTransparentMesh: 1
+--- !u!225 &1904447400
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904447396}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2051770723
 GameObject:
   m_ObjectHideFlags: 0
@@ -4016,7 +4029,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 623a7345ca6d38f4280b86c32ffe7c15, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

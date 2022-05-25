@@ -4282,6 +4282,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1084372741619028850, guid: b4aa86cb089647142a3a56f5ae474be2,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 8309037425384571946}
+    - target: {fileID: 1084372741619028850, guid: b4aa86cb089647142a3a56f5ae474be2,
+        type: 3}
+      propertyPath: gameEnding
+      value: 
+      objectReference: {fileID: 482962488}
     - target: {fileID: 1084372741619028851, guid: b4aa86cb089647142a3a56f5ae474be2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4521,6 +4531,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &4203743842783814220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4203743842783657576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f89e6151e97d6e4ba422d118670c41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navMeshAgent: {fileID: 4203743842783814219}
+  waypoints: []
 --- !u!1001 &6161078917030584120
 PrefabInstance:
   m_ObjectHideFlags: 0

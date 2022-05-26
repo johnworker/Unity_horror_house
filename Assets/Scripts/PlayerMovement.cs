@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     Quaternion m_Rotation = Quaternion.identity;
 
     Rigidbody m_Rigidbody;
+
+    AudioSource m_AudioSource;
     // Start is called before the first frame update
     //void 為返回類型
     //void Start 此語法用在開始遊戲只執行一次
@@ -28,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
         m_Animator = GetComponent<Animator>();
 
         m_Rigidbody = GetComponent<Rigidbody>();
+
+        
+
+        m_AudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +64,18 @@ public class PlayerMovement : MonoBehaviour
           4.接下來的兩個參數是起始向量和目標向量之間的變化量：首先是角度的變化（以弧度為單位），然後是幅度的變化。
             此代碼通過turnSpeed* Time.deltaTime更改角度，將幅度更改為 0。
         */
+        if (isWalking)
+        {
+            if (!m_AudioSource.isPlaying)
+            {
+                m_AudioSource.Play();
+            }
+        }
+        else
+        {
+            m_AudioSource.Stop();
+        }
+
 
         Vector3 desiredForward = Vector3.RotateTowards(transform.forward, m_Movement, turnSpeed * Time.deltaTime, 0f);
         m_Rotation = Quaternion.LookRotation(desiredForward);
